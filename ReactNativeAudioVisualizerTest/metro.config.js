@@ -1,7 +1,7 @@
 // metro.config.js
 // with workaround solutions
 
-const path = require('path')
+const path = require('path');
 
 module.exports = {
   // workaround for issue with symlinks encountered starting with
@@ -10,11 +10,11 @@ module.exports = {
   resolver: {
     extraNodeModules: new Proxy(
       {},
-      { get: (_, name) => path.resolve('.', 'node_modules', name) }
-    )
+      {get: (_, name) => path.resolve('.', 'node_modules', name)},
+    ),
   },
 
   // quick workaround solution for issue with symlinked modules ref:
   // https://github.com/brodybits/create-react-native-module/issues/232
-  watchFolders: [path.resolve('.'), path.resolve('..')]
-}
+  watchFolders: [path.resolve('.'), path.resolve('..')],
+};

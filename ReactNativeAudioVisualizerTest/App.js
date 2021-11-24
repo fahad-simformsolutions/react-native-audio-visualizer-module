@@ -8,8 +8,8 @@
  * https://github.com/facebook/react-native
  */
 
-import React, { Component } from 'react';
-import { Platform, StyleSheet, Text, View } from 'react-native';
+import React, {Component} from 'react';
+import {Platform, StyleSheet, Text, View} from 'react-native';
 import RNAudioVisualizer from 'react-native-audio-visualizer-module';
 
 export default class App extends Component<{}> {
